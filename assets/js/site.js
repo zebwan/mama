@@ -64,7 +64,10 @@
 
   /* ------------------------------------------------------ hero entrance */
   function initHero() {
-    var hero = document.querySelector('.hero');
+    // Case-study pages have no .hero, but they do carry .word / .enter on the
+    // title and standfirst. Without a fallback scope those stay at opacity 0
+    // and the page renders with no heading at all.
+    var hero = document.querySelector('.hero') || document.querySelector('.main');
     if (!hero) return;
 
     if (reduced) {

@@ -325,15 +325,15 @@ body{
 .project:hover .project__cta{background:rgba(255,255,255,.94);border-color:transparent;color:var(--accent)}
 .project__cta svg{width:11px;height:11px}
 
-/* supporting (non-clickable) cards — deliberately smaller for contrast */
+/* supporting cards — smaller for contrast, but they link to a project page too */
 .projects--sub{grid-template-columns:repeat(3,1fr);margin-top:16px}
-.project--sm{aspect-ratio:373/230;cursor:default}
+.project--sm{aspect-ratio:373/230}
 .project--sm .project__meta{left:16px;right:16px;bottom:14px}
 .project--sm .h4{font-size:17px;letter-spacing:-.03em;margin-bottom:5px}
 .project--sm .project__tags{font-size:12.5px}
 .project--sm .project__media::after{background:linear-gradient(180deg,rgba(0,0,0,0) 42%,rgba(0,0,0,.58) 100%)}
-.project--sm:hover .project__media img{transform:none}
-.project--sm:hover .project__media::after{opacity:1}
+.project--sm .project__go{width:26px;height:26px;top:14px;right:14px}
+.project--sm .project__go svg{width:11px;height:11px}
 
 /* ==========================================================================
    Process
@@ -408,6 +408,16 @@ body{
 .case__result strong{display:block;font-size:40px;line-height:1.15;letter-spacing:-.03em;font-weight:500;margin:14px 0 10px}
 .case__result p{color:rgba(255,255,255,.78);font-size:16px;letter-spacing:-.02em;max-width:52ch}
 
+/* inline photo inside a case study body */
+.case__fig{margin:0}
+.case__fig img{
+  width:100%;height:auto;border-radius:var(--r-md);
+  aspect-ratio:3/2;object-fit:cover;background:var(--surface);
+}
+.case__fig figcaption{
+  margin-top:12px;font-size:14px;line-height:1.5;letter-spacing:-.04em;color:var(--muted);
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -446,11 +456,9 @@ body{
   .main{padding-top:var(--topbar)}
   .h1{font-size:40px;line-height:1.1}
   .h2{font-size:34px;line-height:1.2}
-  .hero__inner{text-align:left}
-  .hero__title,.hero__sub{margin-left:0;max-width:none}
-  .hero__cta{justify-content:flex-start}
-  .section__head{text-align:left}
-  .section__head .h2{margin:0;max-width:22ch}
+  /* the reference keeps the hero and centred section heads centred at every
+     width — only the .section__head--left variant goes left. Pages that want a
+     left hero set it inline on .hero__inner. */
   .cards{grid-template-columns:repeat(2,1fr);gap:25px 31px}
   .stats{grid-template-columns:repeat(2,1fr)}
   .about{grid-template-columns:1fr 320px;gap:40px}
@@ -461,21 +469,26 @@ body{
   :root{--gutter:20px}
   .h1{font-size:34px;line-height:1.1}
   .h2{font-size:28px;line-height:1.2}
-  .h4{font-size:20px}
+  .h4{font-size:22px}
   .card-title{font-size:18px}
   .lead{font-size:16px}
   .body{font-size:15px}
   .section{padding:48px 0}
-  .section__head{margin-bottom:40px}
+  .section__head{margin-bottom:42px}
   .hero{padding:32px 0 48px}
+  /* reference holds the hero figures at a fixed 300px tall on mobile */
   .hero__images{grid-template-columns:1fr;gap:10px;margin-top:40px}
+  .hero__images figure{aspect-ratio:auto;height:300px}
   .hero__chips{margin:0 6px}
   .hero__chips img{width:36px;height:36px}
   .cards,.steps,.stats,.lists,.projects,.case__meta{grid-template-columns:1fr;gap:16px}
-  .projects--sub{grid-template-columns:repeat(2,1fr);gap:12px}
-  .project--sm{aspect-ratio:16/11}
-  .project--sm .h4{font-size:15px}
-  .project--sm .project__tags{font-size:11.5px}
+  /* reference stacks every project card full-width in one column on mobile,
+     so the supporting cards match the featured ones rather than shrinking */
+  .projects--sub{grid-template-columns:1fr;gap:16px}
+  .project--sm{aspect-ratio:16/10}
+  .project--sm .project__meta{left:20px;right:20px;bottom:18px}
+  .project--sm .h4{font-size:22px;letter-spacing:-.04em;margin-bottom:8px}
+  .project--sm .project__tags{font-size:14px}
   .about{grid-template-columns:1fr;gap:28px}
   .about__img{max-width:340px}
   .project{aspect-ratio:16/10}
@@ -489,7 +502,7 @@ body{
   .case__banner{margin:32px 0}
   .case__result{padding:28px 24px}
   .case__result strong{font-size:30px}
-  .qcard{width:290px;flex-basis:290px}
+  .qcard{width:302px;flex-basis:302px}
 }
 
 /* ==========================================================================

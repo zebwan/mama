@@ -85,7 +85,9 @@
 
     <section class="section" style="padding-top:24px">
       <div class="wrap">
-        <div class="about" style="grid-template-columns:1fr 373px;gap:56px;align-items:start">
+        <!-- .about already sets these columns; setting them inline defeated the
+             mobile breakpoint and made the page scroll sideways on a phone. -->
+        <div class="about">
 
           <form class="form reveal" data-mailto="nelfarzulkifli@gmail.com" novalidate>
             <div class="field">
@@ -114,7 +116,10 @@
               <p class="card-title" style="margin-bottom:6px">
                 <a class="link-u" href="mailto:nelfarzulkifli@gmail.com">nelfarzulkifli@gmail.com</a>
               </p>
-              <p class="body">Johor Bahru, Malaysia</p>
+              <p class="body" style="margin-bottom:10px">Johor Bahru, Malaysia</p>
+              <p class="body">
+                <a class="link-u" href="https://www.linkedin.com/in/nelfar-zulkifli-586ab71a7/" target="_blank" rel="noopener">LinkedIn profile</a>
+              </p>
             </div>
             <div class="card" style="min-height:0;margin-top:16px">
               <span class="eyebrow" style="display:block;margin-bottom:16px">Currently</span>

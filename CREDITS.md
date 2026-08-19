@@ -124,3 +124,54 @@ Two developments are named, because the building identifies itself in the frame:
 
 Every other caption describes the work without naming a building, and the note at the foot of
 the gallery says so plainly.
+
+---
+
+## 4. The 19 August 2026 batch — Nelfar's review round two
+
+Ten further photographs supplied by Nelfar over WhatsApp on 19 August 2026, alongside caption
+and copy corrections. Her own material again, so provenance is not in question. Filed here for
+the same two reasons as section 3: who appears in them, and what a caption is allowed to claim.
+
+| File | What it shows | Where it is used |
+|---|---|---|
+| `vendor-rooftop.jpg` | Nelfar and a client-side representative going through notes at a rooftop BBQ counter | Gallery, Pre-Vacant Possession |
+| `vendor-tower.jpg` | Vendors looking up at the facade from the drop-off of a completed high-rise | Gallery, Pre-Vacant Possession |
+| `vendor-lobby.jpg` | Nelfar with vendors in a finished lobby during a site visit | Gallery, Pre-Vacant Possession |
+| `vendor-poolside.jpg` | A group of vendors and management staff walking the pool deck | Gallery, Pre-Vacant Possession |
+| `handover-parkland-team.jpg` | Management and developer teams at the HJ2 Parkland Residence Kajang 2 key handover ceremony | Gallery reel, gallery handover section, home teaser strip |
+| `keybook-packing.jpg` | Unit envelopes and files being packed into document boxes | Gallery, Pre-Vacant Possession |
+| `keybook-office.jpg` | Nelfar sorting unit files in an office | Gallery, Pre-Vacant Possession |
+| `site-coordination.jpg` | Nelfar with management staff and a technician in a management office | Gallery, on the ground |
+| `travel-aerial.jpg` | The view from an aircraft window on approach | Gallery, the team |
+| `pipe-excavation.jpg` | Nelfar crouched at an excavated section of road, pointing into a water-filled trench | Gallery, on the ground |
+
+### Identifiable people in this batch
+
+| Risk | Files | Who appears |
+|---|---|---|
+| **High** | `handover-parkland-team.jpg` | Nine colleagues and developer representatives, posed at a branded ceremony backdrop. Promotional context, aware of the camera. |
+| **High** | `site-coordination.jpg` | Six people, faces clear — management staff and a contractor's technician, in a working meeting rather than a posed one. |
+| **Moderate** | `vendor-rooftop.jpg`, `vendor-lobby.jpg`, `vendor-poolside.jpg`, `vendor-tower.jpg` | Vendors and colleagues on a site visit. Faces visible but incidental; several are turned away. |
+| **Moderate** | `keybook-office.jpg` | Two colleagues at desks in the background, one masked. The office wall carries a third party's branding, **weBEST**, which is legible in frame. |
+| **Low** | `keybook-packing.jpg`, `pipe-excavation.jpg`, `travel-aerial.jpg` | Nelfar with her back to the camera, or no people at all. |
+
+Two points worth a decision before the site is promoted:
+
+- **`keybook-office.jpg` carries another company's branding.** The "weBEST" wall logo and the
+  staff noticeboards behind it belong to an unrelated business whose office the work was being
+  done in. Nothing on the site names them, but the logo is readable at full size in the
+  lightbox. Crop or blur if that is not wanted.
+- **`site-coordination.jpg` was supplied labelled "PKI".** The abbreviation is not expanded
+  anywhere in the material sent, so the caption on the site describes the photograph instead of
+  using the label. See the open items in `CONTENT_MAPPING.md`.
+
+### Retired from use, still in the repository
+
+`walkabout-team.jpg`, `briefing-room.jpg` and `team-transit.jpg` were replaced on Nelfar's
+instruction and are no longer referenced by any page. They have not been deleted.
+
+### A named development, added
+
+`handover-parkland-team.jpg` names Parkland Residence Kajang 2 for the same reason
+`handover-parkland.jpg` does: the ceremony backdrop identifies the development in frame.

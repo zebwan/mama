@@ -704,8 +704,121 @@ do not name that event.
    driveway could be named if she wants them named. They are deliberately generic for now.
 10. **The townhall photographs** — the company deck places a townhall at Kajang 2 Parkland. Are
     the gallery photographs from that event? If so the captions can name it.
-11. **Laman Segar Hijau House Rules** — recorded as "about 90 per cent". Worth updating when
-    it is finished.
+11. ~~**Laman Segar Hijau House Rules** — recorded as "about 90 per cent".~~ **Closed 19 Aug 2026.**
+    Nelfar confirmed the set is finished. The case study now says all three are complete.
 12. **The pipe leakage role** — now Business Development Manager on her instruction. Note this
     sits oddly beside the page's own description of day-to-day troubleshooting; the copy was
     softened, but she may want to say more about what the role actually involved there.
+
+---
+
+## Review round two — 19 August 2026
+
+Nelfar sent fourteen corrections over WhatsApp with ten supporting photographs. All fourteen
+are applied. What each one changed:
+
+| # | She said | Applied to |
+|---|---|---|
+| 1 | "Tukar nong Annual General Meeting" — over the caption "A full house at a townhall" | Gallery reel caption is now "Annual General Meeting"; the matching gallery item and the home teaser alt text follow it |
+| 2 | "Pre Vacant Possesion" — struck through "A takeover starts with an empty room", with three bullets: preparation and setting of the Management Office, finalizing the key handbook for all units, assist and arrange for vendors to site visit before appointment | Gallery section 1 relabelled **Pre-Vacant Possession**, heading and standfirst rewritten around her three points. The `#takeover` anchor is unchanged so existing links still land |
+| 3 | "Site visit vendors before appointments by Clients" | New caption on `vendor-lobby.jpg`, plus three further vendor site-visit frames |
+| 4 | "Ni tukar statement" — over "Not every site starts with a room": *Urgent Takeover for Persatuan due to current PM staff last day, I came in and Takeover as per Client's urgent request* | Caption on `site-office-container.jpg` replaced |
+| 5 | "Ini gambar tukar dgn jap eh" then "Dua pic ni nong gabungkan" | `handover-parkland-team.jpg` added to the reel, the handover section and the home strip. **One of the two photographs to be combined was not supplied — see open item 16** |
+| 6 | "Ini tuakr site walk Takeover for facilities and common area" | Caption on `walkabout-courtyard.jpg` is now "Site walk, takeover" |
+| 7 | "Tukar" — *Led the takeover for new projects ensuring all documentations including Operation, Account and Technical is handover accordingly as per the Takeover Listing* | Caption on `desk-documents.jpg` replaced |
+| 8 | "Ini dlm pre vacant possession … Finalizing key book for VP project NOA Reaidence Melaka" | `keybook-office.jpg` and `keybook-packing.jpg` added to Pre-Vacant Possession. **NOA Residence, Melaka is named in a caption but is not on any project list — see open item 17** |
+| 9 | "Gambar pki" / "Pki ni" | Photograph on the "Team briefing" item swapped for `site-coordination.jpg`. **"PKI" is not expanded anywhere — see open item 15** |
+| 10 | "Ni tukar jap" — crossed out the transit-station photograph | `team-transit.jpg` replaced with `travel-aerial.jpg`; the "On the way to a site" caption still fits and is unchanged |
+| 11 | "Tukar pic dgn" — crossed out the outdoor-gym photograph | `walkabout-team.jpg` replaced with `pipe-excavation.jpg`; the "Settling it in front of it" caption is unchanged and now sits over a photograph of her at the excavation |
+| 12 | "Preparing House Rules for new project for Developer (s)" | Home page service card description now leads with that line |
+| 13 | Revised career statement (edited 1:59 PM) | Replaces the August statement on `index.html` and `about.html` in full |
+| 14 | "Da siap da LSH" / "So amend" | Laman Segar Hijau recorded as complete on `work-house-rules.html`; closes open item 11 |
+
+### What changed inside the career statement
+
+Her revision, against the version it replaces:
+
+- "…site management and operations" → "…site management, **operations and technical**"
+- "managing residential developments … **during my tenure with Clement Management Sdn Bhd**"
+  → "managing residential, **commercial and mixed** development projects" — the Clement
+  attribution is dropped. It remains in the experience table on the About page, where the
+  2014–2016 dates make the eight-year span readable
+- "D' Summit" → "D' Summit **Residences**"
+- New sentence, replacing "Holding a position as Business Development Manager": *Throughout my
+  hard work, commitment, leadership and sense of belonging, I managed to climb the ladder from
+  Building Manager to Business Development Manager*
+- "…Property Management, Tender Assessment…" → "…Property Management, **Technical**, Tender
+  Assessment…"
+- "…project Takeovers." → "…project Takeovers **and Handovers**."
+
+Three typographical fixes were made to her text and nothing else: "hardwork" → "hard work",
+"developments projects" → "development projects", and "I am a Master's Degree" → "I hold a
+Master's Degree". Flag these to her if the exact wording matters.
+
+## Open items — round two
+
+13. ~~**The other two general-meeting photographs.**~~ **Closed 19 Aug 2026, round three** — all three frames confirmed to be the same AGM; alt text updated on all three. Original note: She corrected `townhall-floor.jpg` from
+    "townhall" to Annual General Meeting. `townhall-panel.jpg` and `townhall-registration.jpg`
+    still say "townhall" in their alt text and are almost certainly the same event, but she did
+    not mark them. Confirm, then they can be relabelled and the filenames left alone.
+14. **The persatuan in the urgent takeover.** The caption now says a persatuan whose existing
+    property management staff had reached their last day. It does not name the development or
+    the outgoing agent, and should not until she says it may.
+15. **"PKI".** `site-coordination.jpg` was supplied labelled "PKI" with no expansion. The
+    caption on the site describes the photograph instead. Ask her what it stands for so the
+    caption can say it.
+16. **The second key handover photograph.** She asked for two ceremony photographs to be
+    combined. Only the team group shot arrived in the download folder; the second — a family
+    holding an oversized HJ2 key — was not saved. It also shows an owner's family including
+    children, so it needs a consent decision as well as the file.
+17. **NOA Residence, Melaka.** Named in a new caption as the VP project the key book was
+    prepared for. It appears on no CV list and on no project list on the site. Add it to the
+    projects page, or leave it as a caption only.
+18. **The weBEST branding in `keybook-office.jpg`.** Another company's logo is legible on the
+    wall behind her, and readable at full size in the lightbox. Crop, blur, or leave.
+
+## Review round three — 19 August 2026 (same afternoon)
+
+Three further corrections, all applied.
+
+| # | She said | Applied to |
+|---|---|---|
+| 15 | "Ni ade suara ker nong? Ble add in sikit proposal of Assembly Points" | Two things. The question is answered below. The instruction adds the proposed assembly points to the "Walking the entrance road" caption, which is the pre-handover walk they come out of |
+| 16 | "Presentation of the Agenda item by item" — scribbled over "Registration and proxies" | Caption on `townhall-registration.jpg` replaced. **The old caption was factually wrong** — see below |
+| 17 | "Findings during site inspections. Pipe leakage" — scribbled over "Still coming through" | Caption on the `leak-joint.mp4` item is now "Findings during site inspections: pipe leakage" |
+
+### The clips have no sound, by design
+
+Her question — *ade suara ker* — has a definite answer. Neither clip carries an audio track:
+both `driveway-walk.mp4` and `leak-joint.mp4` contain a `vide` handler and no `soun` handler.
+The audio was stripped deliberately when they were first published, because live site sound can
+carry voices, names and matters never meant for a public page. See "Audio was stripped from both
+clips" in `CREDITS.md`. The `10-second clip, no sound` / `5-second loop, no sound` notes under
+each caption already say so on the page. Nothing needed changing; if she wants sound restored,
+the originals would have to be re-encoded and re-reviewed.
+
+### The registration caption was wrong, and two knock-on fixes
+
+`townhall-registration.jpg` was captioned "Registration and proxies" and its alt text called it
+"a registration desk with staff and laptops at the side of a meeting hall". It is not. The
+photograph is the **top table at the general meeting**, with the chairman on the microphone, the
+management team at the counter, and the agenda projected on a screen at the right of frame. Her
+correction is right and the original description was a misreading.
+
+Two consequences were dealt with at the same time:
+
+- **The alt text was rewritten** to describe the top table and the projected agenda.
+- **`townhall-panel.jpg` had to be reworded.** Its caption read "Accounts, works and outstanding
+  matters, taken through item by item in front of the floor" — which is now, almost word for
+  word, what the corrected agenda caption says. The panel caption now covers questions coming off
+  the floor and being answered at the table, so the two describe different moments instead of
+  repeating each other.
+
+### Open item 13 is closed
+
+Round two flagged that `townhall-panel.jpg` and `townhall-registration.jpg` still said "townhall"
+while `townhall-floor.jpg` had been corrected to Annual General Meeting. Comparing the three
+frames settles it: same wood-slatted wall, same louvred windows, same palms, same concrete
+counter. All three are the same annual general meeting, shot from different positions. The alt
+text on all three now says so. **The filenames still say `townhall-` and were left alone** — they
+are referenced from `index.html` as well, and renaming buys nothing.

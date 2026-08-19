@@ -250,6 +250,14 @@ body{
 .about__img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .about__text .eyebrow{display:block;margin-bottom:18px}
 
+/* side column carrying the portrait plus a second, smaller frame */
+.about__col{display:flex;flex-direction:column;gap:16px}
+.about__aside{margin:0}
+.about__aside img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-md);background:var(--surface)}
+.about__aside figcaption{
+  margin-top:10px;font-size:13px;line-height:1.5;letter-spacing:-.04em;color:var(--muted);
+}
+
 /* ==========================================================================
    Marquees
    ========================================================================== */
@@ -433,6 +441,104 @@ body{
 .foot__base{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;font-size:14px;letter-spacing:-.04em;color:var(--muted)}
 
 /* ==========================================================================
+   Field gallery
+   ========================================================================== */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 25px}
+.gal__item{margin:0;display:flex;flex-direction:column}
+.gal__frame{
+  position:relative;border-radius:var(--r-md);overflow:hidden;
+  aspect-ratio:4/3;background:var(--surface);
+}
+.gal__frame img,.gal__frame video{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 600ms var(--ease);
+}
+.gal__item:hover .gal__frame img{transform:scale(1.03)}
+.gal__cap{margin-top:14px;font-size:14px;line-height:1.5;letter-spacing:-.04em;color:var(--muted)}
+.gal__cap b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
+
+/* span modifiers — a gallery of identical tiles reads as a stock grid, so the
+   strongest frames in each group take more room */
+.gal__item--wide{grid-column:span 2}
+.gal__item--wide .gal__frame{aspect-ratio:16/9}
+.gal__item--tall .gal__frame{aspect-ratio:3/4}
+.gal__item--full{grid-column:1 / -1}
+.gal__item--full .gal__frame{aspect-ratio:21/9}
+
+/* zoom affordance on tiles that open in the lightbox */
+.js .gal__frame[data-zoom]{cursor:zoom-in}
+.gal__zoom{
+  position:absolute;top:14px;right:14px;width:28px;height:28px;border-radius:var(--r-pill);
+  background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--accent);
+  opacity:0;transform:translateY(-4px);
+  transition:opacity 300ms var(--ease),transform 300ms var(--ease);
+}
+.gal__item:hover .gal__zoom{opacity:1;transform:none}
+.gal__zoom svg{width:12px;height:12px}
+
+/* ---------- video ---------- */
+.gal__frame video{background:var(--ink)}
+.gal__frame--video{cursor:default}
+.gal__frame--contain{background:var(--surface)}
+.gal__frame--contain video{object-fit:contain;background:transparent}
+/* sits under the caption text, on its own line, not trailing the sentence */
+.vid-note{
+  display:flex;align-items:center;gap:7px;margin-top:10px;
+  font-size:12px;letter-spacing:-.03em;color:var(--muted);
+}
+.vid-note i{width:5px;height:5px;border-radius:var(--r-pill);background:var(--accent);display:block;flex:0 0 5px}
+
+/* a single video used inside a case-study body */
+.case__video{margin:0}
+.case__video video{width:100%;height:auto;border-radius:var(--r-md);display:block;background:#141210}
+.case__video figcaption{margin-top:12px;font-size:14px;line-height:1.5;letter-spacing:-.04em;color:var(--muted)}
+
+/* ---------- home teaser strip ---------- */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.strip a{display:block;border-radius:var(--r-md);overflow:hidden;aspect-ratio:4/3;background:var(--surface)}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform 600ms var(--ease)}
+.strip a:hover img{transform:scale(1.04)}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:90;display:none}
+.lb.is-open{display:block}
+.lb__backdrop{position:absolute;inset:0;background:rgba(20,18,16,.92);opacity:0;transition:opacity 260ms var(--ease)}
+.lb.is-in .lb__backdrop{opacity:1}
+.lb__stage{
+  position:absolute;inset:0;display:grid;place-items:center;padding:56px 24px 84px;
+  opacity:0;transform:scale(.98);transition:opacity 260ms var(--ease),transform 260ms var(--ease);
+}
+.lb.is-in .lb__stage{opacity:1;transform:none}
+/* explicit viewport maths — a percentage max-height on a centred grid item
+   resolves against the padding box, and the image runs under the caption */
+.lb__stage img{
+  max-width:calc(100vw - 56px);max-height:calc(100vh - 156px);
+  object-fit:contain;border-radius:var(--r-sm);
+}
+.lb__cap{
+  position:absolute;left:24px;right:24px;bottom:26px;text-align:center;
+  max-width:76ch;margin:0 auto;
+  font-size:14px;line-height:1.5;letter-spacing:-.04em;color:rgba(255,255,255,.72);
+}
+.lb__cap b{display:block;color:var(--white);font-weight:500;margin-bottom:4px}
+.lb__btn{
+  position:absolute;top:18px;right:18px;width:38px;height:38px;border:0;cursor:pointer;
+  border-radius:var(--r-pill);background:rgba(255,255,255,.14);color:var(--white);
+  display:grid;place-items:center;transition:background var(--t) var(--ease);
+}
+.lb__btn:hover{background:rgba(255,255,255,.28)}
+.lb__btn svg{width:14px;height:14px}
+.lb__nav{
+  position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;cursor:pointer;
+  border-radius:var(--r-pill);background:rgba(255,255,255,.14);color:var(--white);
+  display:grid;place-items:center;transition:background var(--t) var(--ease);
+}
+.lb__nav:hover{background:rgba(255,255,255,.28)}
+.lb__nav svg{width:14px;height:14px}
+.lb__nav--prev{left:18px}
+.lb__nav--next{right:18px}
+
+/* ==========================================================================
    Reveal animation
    ========================================================================== */
 .js .reveal{opacity:0;transform:translateY(24px)}
@@ -463,6 +569,10 @@ body{
   .stats{grid-template-columns:repeat(2,1fr)}
   .about{grid-template-columns:1fr 320px;gap:40px}
   .foot__cta b{font-size:48px}
+  .gal{grid-template-columns:repeat(2,1fr);gap:28px 25px}
+  .gal__item--wide{grid-column:span 2}
+  .gal__item--full .gal__frame{aspect-ratio:16/9}
+  .strip{grid-template-columns:repeat(2,1fr)}
 }
 
 @media (max-width:809px){
@@ -491,6 +601,8 @@ body{
   .project--sm .project__tags{font-size:14px}
   .about{grid-template-columns:1fr;gap:28px}
   .about__img{max-width:340px}
+  .about__col{gap:22px}
+  .about__aside img{max-width:340px}
   .project{aspect-ratio:16/10}
   .exp__row{grid-template-columns:1fr;gap:8px;align-items:start}
   .exp__when{white-space:normal}
@@ -503,6 +615,18 @@ body{
   .case__result{padding:28px 24px}
   .case__result strong{font-size:30px}
   .qcard{width:302px;flex-basis:302px}
+  /* one column on a phone, and every frame drops its span so nothing is
+     squeezed into a letterbox that loses the subject */
+  .gal{grid-template-columns:1fr;gap:26px}
+  .gal__item--wide,.gal__item--full{grid-column:auto}
+  .gal__item--wide .gal__frame,.gal__item--full .gal__frame{aspect-ratio:4/3}
+  .gal__item--tall .gal__frame{aspect-ratio:4/5}
+  .lb__stage{padding:52px 14px 92px}
+  .lb__nav{width:36px;height:36px}
+  .lb__nav--prev{left:10px}
+  .lb__nav--next{right:10px}
+  /* two-up rather than one, so the strip still reads as a strip on a phone */
+  .strip{grid-template-columns:repeat(2,1fr);gap:10px}
 }
 
 /* ==========================================================================

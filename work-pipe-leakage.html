@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
 <link rel="icon" href="assets/img/avatar.jpg?v=3">
 </head>
 <body>
@@ -34,6 +34,7 @@
       <a class="nav__item" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"/></svg>Home</a>
       <a class="nav__item" href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>About</a>
       <a class="nav__item" href="projects.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h6l2 2h10v11H3z"/></svg>Projects</a>
+      <a class="nav__item" href="gallery.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="m4 17 5-5 4 4 3-2 4 4"/></svg>From the field</a>
       <a class="nav__item" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v6h-2A17 17 0 0 1 4 7z"/></svg>Contact</a>
     </nav>
     <img class="rail__tile" src="assets/img/sidebar.jpg?v=2" alt="Rope-access technicians inspecting a high-rise façade" width="200" height="130" loading="lazy">
@@ -60,6 +61,7 @@
         <a class="nav__item" href="index.html">Home</a>
         <a class="nav__item" href="about.html">About</a>
         <a class="nav__item" href="projects.html" aria-current="page">Projects</a>
+        <a class="nav__item" href="gallery.html">From the field</a>
         <a class="nav__item" href="contact.html">Contact</a>
       </nav>
       <div class="rail__foot">
@@ -115,12 +117,45 @@
           </div>
 
           <div class="reveal">
+            <figure class="case__video">
+              <video src="assets/video/leak-joint.mp4" poster="assets/video/leak-joint-poster.jpg"
+                     data-autoloop muted loop controls playsinline preload="metadata"
+                     aria-label="Water dripping steadily from a wrapped joint on a water main"></video>
+              <figcaption>
+                Water coming through a wrapped joint on a main, onto a floor already wet from it.
+                Footage and photographs like this are what a contractor instruction and a claim are
+                built on, and what stops the argument about whether there is a leak at all.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="reveal">
             <h2>Approach</h2>
             <p class="body">
               The work was to identify the leak, get it excavated and repaired, and coordinate the
               contractors and the stakeholders through to completion — the same technical and
               non-technical troubleshooting that day-to-day building management runs on.
             </p>
+          </div>
+
+          <div class="reveal">
+            <figure class="case__fig">
+              <img src="assets/img/field/water-ingress.jpg" alt="Standing water and staining across a bare concrete floor slab" width="1080" height="810" loading="lazy">
+              <figcaption>
+                Standing water and staining on a slab. Symptoms show up a long way from the fault,
+                which is why tracing one takes longer than fixing it.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="reveal">
+            <figure class="case__fig">
+              <img src="assets/img/field/pipe-support.jpg" alt="A water main resting on temporary concrete block supports above a wet floor" width="1080" height="810" loading="lazy">
+              <figcaption>
+                The main lifted onto temporary supports, clear of the water, while the source is
+                traced and the permanent repair is arranged.
+              </figcaption>
+            </figure>
           </div>
 
           <div class="reveal">
@@ -168,6 +203,6 @@
   </main>
 </div>
 
-<script src="assets/js/site.js"></script>
+<script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

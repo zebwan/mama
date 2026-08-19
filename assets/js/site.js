@@ -21,8 +21,10 @@
     function open() {
       lastFocus = document.activeElement;
       drawer.classList.add('is-open');
-      // next frame so the transition runs
-      requestAnimationFrame(function () { drawer.classList.add('is-in'); });
+      // reflow, not rAF: a throttled tab never runs the callback and the panel
+      // would stay off-screen with the backdrop already blocking the page
+      void drawer.offsetWidth;
+      drawer.classList.add('is-in');
       burger.setAttribute('aria-expanded', 'true');
       document.body.style.overflow = 'hidden';
       var first = panel.querySelector('a, button');
@@ -222,6 +224,108 @@
     });
   }
 
+  /* ----------------------------------------------------------- gallery */
+  /* Autoplaying clips are a decoration, not the content: honour reduced
+     motion, and never let a clip run while it is off screen. */
+  function initClips() {
+    var clips = document.querySelectorAll('video[data-autoloop]');
+    if (!clips.length) return;
+
+    // The markup ships with `controls` so the clip is still playable with
+    // JavaScript off. Only take them away once we can drive playback ourselves.
+    if (reduced || !('IntersectionObserver' in window)) return;
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          var p = e.target.play();
+          if (p && p.catch) p.catch(function () { e.target.setAttribute('controls', ''); });
+        } else {
+          e.target.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    clips.forEach(function (v) {
+      v.removeAttribute('controls');
+      io.observe(v);
+    });
+  }
+
+  /* --------------------------------------------------------- lightbox */
+  function initLightbox() {
+    var frames = Array.prototype.slice.call(document.querySelectorAll('[data-zoom]'));
+    var lb = document.querySelector('.lb');
+    if (!frames.length || !lb) return;
+
+    var stage = lb.querySelector('.lb__stage');
+    var capEl = lb.querySelector('.lb__cap');
+    var index = 0;
+    var lastFocus = null;
+
+    function render() {
+      var frame = frames[index];
+      var img = frame.querySelector('img');
+      var cap = frame.closest('.gal__item');
+      cap = cap ? cap.querySelector('.gal__cap') : null;
+      stage.innerHTML = '';
+      var big = new Image();
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt || '';
+      stage.appendChild(big);
+      capEl.innerHTML = cap ? cap.innerHTML : '';
+    }
+
+    function open(i) {
+      index = i;
+      lastFocus = document.activeElement;
+      render();
+      lb.classList.add('is-open');
+      // commit the closed state before the open one, so the transition has a
+      // start frame. A reflow does this synchronously; rAF does not fire at all
+      // in a throttled tab, which would leave the viewer open but invisible.
+      void lb.offsetWidth;
+      lb.classList.add('is-in');
+      document.body.style.overflow = 'hidden';
+      lb.querySelector('.lb__btn').focus();
+    }
+    function close() {
+      lb.classList.remove('is-in');
+      document.body.style.overflow = '';
+      window.setTimeout(function () {
+        lb.classList.remove('is-open');
+        stage.innerHTML = '';
+      }, 260);
+      if (lastFocus) lastFocus.focus();
+    }
+    function step(dir) {
+      index = (index + dir + frames.length) % frames.length;
+      render();
+    }
+
+    frames.forEach(function (frame, i) {
+      frame.setAttribute('tabindex', '0');
+      frame.setAttribute('role', 'button');
+      frame.setAttribute('aria-label', 'Open image');
+      frame.addEventListener('click', function () { open(i); });
+      frame.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+      });
+    });
+
+    lb.querySelector('.lb__btn').addEventListener('click', close);
+    lb.querySelector('.lb__backdrop').addEventListener('click', close);
+    lb.querySelector('.lb__nav--prev').addEventListener('click', function () { step(-1); });
+    lb.querySelector('.lb__nav--next').addEventListener('click', function () { step(1); });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('is-in')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
+    });
+  }
+
   /* ------------------------------------------------------ stagger index */
   function initStagger() {
     document.querySelectorAll('[data-stagger]').forEach(function (group) {
@@ -240,6 +344,8 @@
     initReveal();
     initCounters();
     initForm();
+    initClips();
+    initLightbox();
     initHero();
   }
 

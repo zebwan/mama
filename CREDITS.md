@@ -76,3 +76,51 @@ Marki attendance watermark, which burns in street addresses and staff names.
 
 Roughly half the archive contains identifiable faces with no record of consent. Those images
 are not used. `Roof top.jpeg` was considered for a project page and rejected on that basis.
+
+---
+
+## 3. The August 2026 batch — `assets/img/field/` and `assets/video/`
+
+Twenty-eight photographs and two clips supplied directly by Nelfar in August 2026, used on
+`gallery.html` and seeded into `index.html`, `about.html` and `work-pipe-leakage.html`.
+All are her own material, so provenance is not in question here. Two things are.
+
+### Identifiable people — READ THIS BEFORE THE SITE IS PROMOTED
+
+The rule applied to the earlier archive was that images containing identifiable third parties
+with no record of consent were left out. **This batch breaks that rule, on instruction.**
+The images were supplied specifically to be published, so they are published. The exposure
+is not equal across them:
+
+| Risk | Files | Who appears |
+|---|---|---|
+| **Highest** | `townhall-floor.jpg`, `townhall-panel.jpg`, `townhall-registration.jpg` | Residents and owners at a general meeting, faces clear, in numbers. They are not employees and have no relationship with this site. |
+| **High** | `team-model.jpg`, `team-meldrum.jpg`, `team-transit.jpg`, `briefing-room.jpg`, `handover-parkland.jpg` | Named-company colleagues and a client representative, posed and aware of the camera. |
+| **Moderate** | `desk-documents.jpg`, `desk-records.jpg`, `office-contractors.jpg`, `walkabout-team.jpg`, `office-desks.jpg` | Colleagues and contractors at work, faces visible but incidental. |
+| **Low** | every remaining file | Empty rooms, plant, pipework, or Nelfar with her back to the camera. |
+
+**Recommendation:** the three `townhall-*` frames are the ones to raise with Nelfar before the
+site is shared anywhere public. Everything else is defensible as ordinary workplace
+photography; a hall of paying owners is a different question, and an easy one to get wrong.
+If she would rather not, the group survives on the other two frames and the section still reads.
+
+### Audio was stripped from both clips
+
+`leak-joint.mp4` and `driveway-walk.mp4` were re-encoded without their audio tracks. The
+originals carried live site sound, which on a working site can include voices, names and
+matters that were never meant to be published. Nothing on the site needs the sound. The
+captions say "no sound" so a visitor does not think their speakers are broken.
+
+### Named in a caption
+
+Two developments are named, because the building identifies itself in the frame:
+
+- `handover-parkland.jpg` — the backdrop reads "Key Handover Ceremony, PARKLAND RESIDENCE
+  KAJANG 2", with HJ2 and Parkland branding. "Kajang 2 Residence — Parkland" is already on
+  the CV's selected-projects list, so the two corroborate each other.
+- `team-meldrum.jpg` — the lobby signage reads "MELDRUM HEIGHTS / RESIDENSI MELDRUM".
+  **This development is not on the CV and has not been added to the project lists.** It is
+  named in the gallery caption only, on the strength of the photograph. Worth confirming.
+
+Every other caption describes the work without naming a building, and the note at the foot of
+the gallery says so plainly.

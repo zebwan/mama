@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500;14..32,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
 <link rel="icon" href="assets/img/avatar.jpg?v=3">
 </head>
 <body>
@@ -29,6 +29,7 @@
       <a class="nav__item" href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"/></svg>Home</a>
       <a class="nav__item" href="about.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>About</a>
       <a class="nav__item" href="projects.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h6l2 2h10v11H3z"/></svg>Projects</a>
+      <a class="nav__item" href="gallery.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="m4 17 5-5 4 4 3-2 4 4"/></svg>From the field</a>
       <a class="nav__item" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h6l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v6h-2A17 17 0 0 1 4 7z"/></svg>Contact</a>
     </nav>
 
@@ -63,6 +64,7 @@
         <a class="nav__item" href="index.html" aria-current="page">Home</a>
         <a class="nav__item" href="about.html">About</a>
         <a class="nav__item" href="projects.html">Projects</a>
+        <a class="nav__item" href="gallery.html">From the field</a>
         <a class="nav__item" href="contact.html">Contact</a>
       </nav>
       <div class="rail__foot">
@@ -166,18 +168,52 @@
           <div class="about__text">
             <span class="eyebrow">About me</span>
             <p class="lead">
-              I've worked in property management since 2014, starting in building administration
-              before moving into site management. For eight years I ran buildings directly — Villa Ros
-              and Park Avenue in Tampoi, Eco Cascadia and Iskandar Residences, then Greenfield Regency,
-              Southkey Mosaic and The Lakefront Southkey with CBRE WTW. Since 2022 I've worked on the
-              other end of the process at SA Property Management, assessing developments at tender
-              stage and leading the takeover that turns a completed building into a managed one.
-              I hold a Master in Management from UNIRAZAK.
+              I have been working in the property management industry since 2014, beginning my career
+              in building administration before progressing into site management and operations.
+            </p>
+            <p class="body" style="margin-top:20px">
+              For eight years, I was directly involved in managing residential developments, including
+              Villa Ros Townhouse and Park Avenue, during my tenure with Clement Management Sdn Bhd.
+            </p>
+            <p class="body" style="margin-top:16px">
+              During my tenure with CBRE-WTW, I managed Greenfield Regency, Tampoi, Southkey Mosaic
+              and Lakefront Southkey, while also providing operational support to other developments,
+              including D' Summit and The Seed, Johor Bahru.
+            </p>
+            <p class="body" style="margin-top:16px">
+              Under SA Property Management Sdn Bhd, I was responsible for managing several
+              developments, including Eco Cascadia, Setia Indah, and Iskandar Residences Medini,
+              Iskandar Puteri, holding a position as Building Manager. Since 2021 till current, I have
+              taken on a broader role with SA Property Management Sdn Bhd, working on the other end of
+              the property management process. Holding a position as Business Development Manager, my
+              responsibilities include assessing developments at the Tender stage, preparing
+              management proposals, Budgets, House Rules, Operational Forms for new projects, and
+              leading the Pre-Vacant Possession, Vacant Possession, Takeover process, ensuring that
+              completed developments are effectively transitioned into professionally managed
+              properties.
+            </p>
+            <p class="body" style="margin-top:16px">
+              With more than a decade of experience in the Property Management Industry, I have gained
+              comprehensive experience across Building Administration, Site Operations, Property
+              Management, Tender Assessment, Client Engagement, Pre-Vacant Possession, Vacant
+              Possession and project Takeovers.
+            </p>
+            <p class="body" style="margin-top:16px">
+              I hold a Master's Degree in Management from Universiti Tun Abdul Razak (UNIRAZAK),
+              Kuala Lumpur.
             </p>
           </div>
-          <figure class="about__img">
-            <img src="assets/img/portrait.jpg?v=3" alt="Nelfar Zulkifli" width="760" height="780" loading="lazy">
-          </figure>
+          <!-- the statement runs long, so the side column carries a second
+               frame rather than leaving half of it empty -->
+          <div class="about__col">
+            <figure class="about__img">
+              <img src="assets/img/portrait.jpg?v=3" alt="Nelfar Zulkifli" width="760" height="780" loading="lazy">
+            </figure>
+            <figure class="about__aside">
+              <img src="assets/img/field/desk-records.jpg" alt="Nelfar Zulkifli at her desk in a management office, with a planning board on the wall behind" width="1080" height="810" loading="lazy">
+              <figcaption>At the management office desk. Records, reporting and the week's works, in one place.</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -193,6 +229,7 @@
         <div class="marquee__track">
           <div class="chipline">
             <span>Southkey Mosaic</span><span>The Lakefront Southkey</span><span>Greenfield Regency</span>
+            <span>D' Summit</span><span>The Seed</span>
             <span>Eco Cascadia</span><span>Iskandar Residences Medini</span><span>SKS Habitat Larkin</span>
             <span>Encorp Marina</span><span>Avira Iskandar</span><span>The Shore Melaka</span>
             <span>The Quartz Melaka</span><span>Twin Danga Residence</span><span>Coronation Square</span>
@@ -296,6 +333,39 @@
       </div>
     </section>
 
+    <!-- ---------- from the field ---------- -->
+    <section class="section" style="padding-top:0" id="field">
+      <div class="wrap">
+        <header class="section__head section__head--left reveal" style="margin-bottom:24px">
+          <span class="eyebrow">From the field</span>
+          <h2 class="h2">What that looks like on site</h2>
+        </header>
+        <p class="body reveal" style="max-width:66ch;margin-bottom:32px">
+          Management offices going in, plant rooms being checked, keys handed over, and owners'
+          meetings run to the end. Working photographs, taken while the job was being done.
+        </p>
+
+        <div class="strip reveal">
+          <a href="gallery.html#takeover" aria-label="From the field: takeover and setup">
+            <img src="assets/img/field/office-reception.jpg" alt="A finished reception counter in a management office" width="1080" height="810" loading="lazy">
+          </a>
+          <a href="gallery.html#handover" aria-label="From the field: vacant possession and handover">
+            <img src="assets/img/field/handover-parkland.jpg" alt="Nelfar Zulkifli at the key handover ceremony for Parkland Residence Kajang 2" width="810" height="1080" loading="lazy">
+          </a>
+          <a href="gallery.html#plant" aria-label="From the field: plant, services and defects">
+            <img src="assets/img/field/plant-pool-filtration.jpg" alt="Sand filters, pumps and valve sets in a pool filtration plant room" width="1080" height="810" loading="lazy">
+          </a>
+          <a href="gallery.html#meetings" aria-label="From the field: owners, committees and authorities">
+            <img src="assets/img/field/townhall-floor.jpg" alt="A full hall of seated residents at a townhall meeting" width="1080" height="810" loading="lazy">
+          </a>
+        </div>
+
+        <div style="margin-top:32px" class="reveal">
+          <a class="btn btn--primary" href="gallery.html">See the work on site</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ---------- track record ---------- -->
     <section class="section" id="track">
       <div class="wrap">
@@ -348,6 +418,6 @@
   </main>
 </div>
 
-<script src="assets/js/site.js"></script>
+<script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

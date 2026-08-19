@@ -594,6 +594,40 @@ factual equivalent.
 
 ---
 
+## August 2026 amendment — Nelfar's own statement
+
+The About copy on `index.html` and `about.html` was replaced with a statement Nelfar wrote
+herself and sent on 18 August 2026. It is reproduced essentially verbatim, including her
+capitalisation of role and process terms ("Tender stage", "House Rules", "Vacant Possession"),
+which is how the industry writes them. One change was made: "I am a Master's Degree in
+Management from..." was corrected to "I hold a Master's Degree in Management from...".
+
+The statement is now the authority for the career section, and it corrected four things:
+
+| Was on the site | Her statement says | Applied |
+|---|---|---|
+| Business Development Manager since **2022** | "Since **2021** till current" | Yes — the experience table now reads SA Property Management 2021 – Present and CBRE-WTW 2018 – 2021, and the period lines on the case-study pages follow. **This is the one change worth double-checking with her**, because it moves the end of the CBRE-WTW period too, and she may have meant only that the role changed in 2021. |
+| Villa Ros and Park Avenue grouped loosely into "eight years running buildings" | Both were **during Clement Management Sdn Bhd** | Yes |
+| Eco Cascadia and Iskandar Residences implied to sit with the CBRE-WTW period | Both were **under SA Property Management**, as Building Manager | Yes |
+| — | Operational support to **D' Summit** and **The Seed**, Johor Bahru, during CBRE-WTW | Yes — added to the Projects Managed list marked "operational support", and to the home-page developments marquee |
+
+Her statement also describes the Business Development Manager role in more detail than the CV
+did: management proposals, Budgets, House Rules, Operational Forms, and leading the
+Pre-Vacant Possession / Vacant Possession / Takeover process. That wording now appears on the
+site as she wrote it.
+
+## August 2026 amendment — the field gallery
+
+`gallery.html` is new: 28 photographs and 2 clips from Nelfar's own August 2026 batch,
+grouped into six sections. Captions describe what is visible in the frame and the working
+reason it matters. **No caption claims a development, a date or a figure that is not either
+visible in the photograph or already established elsewhere on the site.** Provenance, the
+identifiable-people question and the two named buildings are recorded in `CREDITS.md`.
+
+The two clips are placed where they carry weight rather than where they fill space: the
+leaking-joint clip sits in the pipe-leakage case study as evidence, and appears in the gallery
+as well; the site-walk clip sits in the vacant-possession group.
+
 ## Open items to confirm with Nelfar
 
 1. **The pipe leakage site** — was it Vista Seri Alam? If so the case study can name it.
@@ -601,3 +635,12 @@ factual equivalent.
 3. **LinkedIn** — add to the sidebar, or keep the site contact-form-only?
 4. **The 40+ figure** — she can tell us the true unique count; the CV's three lists overlap.
 5. **Preferred name** — the site uses "Nelfar Zulkifli"; the full form appears on the About page.
+6. **The 2021 date** — her statement says the Business Development Manager role began in 2021,
+   where the CV said 2022. The site now follows her statement, which also shortens the
+   CBRE-WTW period to 2018 – 2021. Confirm both ends of that move.
+7. **Meldrum Heights** — appears in a gallery photograph but is on no CV list. Add it to the
+   project lists, or leave it as a caption only?
+8. **The townhall photographs** — three frames show a hall of owners with clear faces. Cleared
+   to publish? See `CREDITS.md`.
+9. **The unnamed buildings in the gallery** — several offices, plant rooms and the handover
+   driveway could be named if she wants them named. They are deliberately generic for now.

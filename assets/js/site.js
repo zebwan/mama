@@ -252,6 +252,100 @@
     });
   }
 
+  /* ------------------------------------------------------ highlight reel */
+  function initReel() {
+    var track = document.querySelector('[data-reel-track]');
+    if (!track) return;
+
+    var bar = document.querySelector('[data-reel-bar]');
+    var prev = document.querySelector('[data-reel="prev"]');
+    var next = document.querySelector('[data-reel="next"]');
+    var item = track.querySelector('.reel__item');
+
+    function step() {
+      // one card plus the gap, measured rather than assumed, so the card width
+      // can stay a clamp() in the stylesheet
+      if (!item) return 300;
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 12;
+      return item.getBoundingClientRect().width + gap;
+    }
+
+    function sync() {
+      var max = track.scrollWidth - track.clientWidth;
+      var p = max > 0 ? track.scrollLeft / max : 0;
+      if (bar) {
+        // the thumb represents how much of the strip is on screen
+        var visible = track.clientWidth / track.scrollWidth;
+        bar.style.width = Math.max(visible, 0.08) * 100 + '%';
+        bar.style.transform = 'translateX(' + (p * (100 / Math.max(visible, 0.08) - 100)) + '%)';
+      }
+      if (prev) prev.disabled = track.scrollLeft < 4;
+      if (next) next.disabled = track.scrollLeft > max - 4;
+    }
+
+    // Assign scrollLeft rather than calling scrollBy, and let the stylesheet's
+    // scroll-behavior animate it. scrollBy with an options object is the more
+    // fragile of the two and does nothing at all in some headless engines.
+    function nudge(dir) {
+      if (reduced) track.style.scrollBehavior = 'auto';
+      var max = track.scrollWidth - track.clientWidth;
+      var to = track.scrollLeft + dir * step();
+      track.scrollLeft = to < 0 ? 0 : (to > max ? max : to);
+      sync();
+    }
+    if (prev) prev.addEventListener('click', function () { nudge(-1); });
+    if (next) next.addEventListener('click', function () { nudge(1); });
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync, { passive: true });
+    sync();
+  }
+
+  /* --------------------------------------------------------- parallax */
+  /* Each .gal__par is 114% of its frame, so shifting it up to ±7% keeps the
+     frame covered while the image drifts against the page as you scroll. */
+  function initParallax() {
+    var layers = Array.prototype.slice.call(document.querySelectorAll('.gal__par'));
+    if (!layers.length || reduced) return;
+
+    var live = [];
+    var ticking = false;
+
+    function paint() {
+      ticking = false;
+      var vh = window.innerHeight;
+      for (var i = 0; i < live.length; i++) {
+        var el = live[i];
+        var r = el.parentNode.getBoundingClientRect();
+        // -1 when the frame is just below the fold, 1 when it is just above
+        var p = ((r.top + r.height / 2) - vh / 2) / (vh / 2 + r.height / 2);
+        if (p < -1) p = -1; else if (p > 1) p = 1;
+        el.style.transform = 'translate3d(0,' + (p * -6).toFixed(2) + '%,0)';
+      }
+    }
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(paint);
+    }
+
+    if (!('IntersectionObserver' in window)) return;
+    // only frames on screen are measured, so a 28-image page still costs
+    // a handful of reads per frame rather than 28
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var at = live.indexOf(e.target);
+        if (e.isIntersecting && at === -1) live.push(e.target);
+        else if (!e.isIntersecting && at !== -1) live.splice(at, 1);
+      });
+      paint();
+    }, { rootMargin: '10% 0px' });
+
+    layers.forEach(function (el) { io.observe(el); });
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    paint();
+  }
+
   /* --------------------------------------------------------- lightbox */
   function initLightbox() {
     var frames = Array.prototype.slice.call(document.querySelectorAll('[data-zoom]'));
@@ -345,7 +439,9 @@
     initCounters();
     initForm();
     initClips();
+    initReel();
     initLightbox();
+    initParallax();
     initHero();
   }
 

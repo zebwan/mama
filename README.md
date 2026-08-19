@@ -22,7 +22,7 @@ Static HTML, CSS and vanilla JavaScript. No build step, no dependencies.
 
 - `assets/css/site.css` — all styling, design tokens as CSS custom properties
 - `assets/js/site.js` — scroll reveals, mobile drawer, marquees, count-up statistics, mail form,
-  gallery lightbox, in-view clip playback
+  gallery lightbox, in-view clip playback, highlight reel, image parallax
 - `assets/img/` — images; `assets/img/field/` is the working photography used by the gallery
 - `assets/video/` — two short clips, each with a poster frame, no audio track
 

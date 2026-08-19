@@ -453,7 +453,16 @@ body{
   width:100%;height:100%;object-fit:cover;display:block;
   transition:transform 600ms var(--ease);
 }
-.gal__item:hover .gal__frame img{transform:scale(1.03)}
+.gal__item:hover .gal__frame img{transform:scale(1.04)}
+
+/* Parallax layer. The translate is written here by script every frame, so it
+   carries no transition — the hover scale stays on the img underneath, where a
+   transition is wanted and will not fight the scroll. */
+.gal__par{
+  display:block;position:absolute;inset:-7% 0;
+  will-change:transform;
+}
+.gal__par img{width:100%;height:100%;object-fit:cover;display:block}
 .gal__cap{margin-top:14px;font-size:14px;line-height:1.5;letter-spacing:-.04em;color:var(--muted)}
 .gal__cap b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
 
@@ -492,6 +501,42 @@ body{
 .case__video{margin:0}
 .case__video video{width:100%;height:auto;border-radius:var(--r-md);display:block;background:#141210}
 .case__video figcaption{margin-top:12px;font-size:14px;line-height:1.5;letter-spacing:-.04em;color:var(--muted)}
+
+/* ---------- highlight reel ---------- */
+.reel__head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.reel__nav{display:flex;gap:8px}
+.reel__nav button{
+  width:34px;height:34px;border-radius:var(--r-pill);border:0;cursor:pointer;
+  background:var(--surface);color:var(--ink);display:grid;place-items:center;
+  transition:background var(--t) var(--ease),opacity var(--t) var(--ease);
+}
+.reel__nav button:hover{background:var(--surface-2)}
+.reel__nav button[disabled]{opacity:.3;cursor:default}
+.reel__nav svg{width:13px;height:13px}
+
+.reel{position:relative}
+.reel__track{
+  display:flex;gap:12px;
+  overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  /* bleed past the right gutter so the next card peeks and the strip reads
+     as something you can push, rather than a row that happens to be cut off */
+  margin-right:calc(-1 * var(--gutter));padding-right:var(--gutter);
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.reel__track::-webkit-scrollbar{display:none}
+.reel__item{flex:0 0 300px;margin:0;scroll-snap-align:start}
+.reel__frame{
+  position:relative;overflow:hidden;border-radius:var(--r-md);
+  aspect-ratio:4/3;background:var(--surface);
+}
+.reel__frame img{transition:transform 600ms var(--ease)}
+.reel__item:hover .reel__frame img{transform:scale(1.04)}
+.reel__item figcaption{
+  margin-top:12px;font-size:14px;letter-spacing:-.04em;color:var(--muted);
+}
+.reel__bar{height:2px;background:var(--line);border-radius:2px;margin-top:22px;overflow:hidden}
+.reel__bar span{display:block;height:100%;width:12%;background:var(--accent);border-radius:2px;transform-origin:left}
 
 /* ---------- home teaser strip ---------- */
 .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
@@ -615,12 +660,23 @@ body{
   .case__result{padding:28px 24px}
   .case__result strong{font-size:30px}
   .qcard{width:302px;flex-basis:302px}
-  /* one column on a phone, and every frame drops its span so nothing is
-     squeezed into a letterbox that loses the subject */
-  .gal{grid-template-columns:1fr;gap:26px}
-  .gal__item--wide,.gal__item--full{grid-column:auto}
-  .gal__item--wide .gal__frame,.gal__item--full .gal__frame{aspect-ratio:4/3}
-  .gal__item--tall .gal__frame{aspect-ratio:4/5}
+  /* Two columns with a deliberate rhythm rather than one tall stack: a
+     full-width frame opens each group, pairs carry the middle, and the tiles
+     marked --mfull are the ones that would otherwise sit alone beside a hole. */
+  .gal{grid-template-columns:repeat(2,1fr);gap:22px 12px}
+  .gal__item--wide,.gal__item--full,.gal__item--mfull{grid-column:1 / -1}
+  .gal__frame{aspect-ratio:1/1}
+  .gal__item--wide .gal__frame,
+  .gal__item--full .gal__frame,
+  .gal__item--mfull .gal__frame{aspect-ratio:16/10}
+  .gal__item--tall .gal__frame{aspect-ratio:3/4}
+  .gal__cap{margin-top:10px;font-size:13px}
+  /* the clips keep their own shape — a square crop loses them. Selector is
+     weighted to beat the --wide/--mfull frame rules above. */
+  .gal__item .gal__frame--video{aspect-ratio:16/9}
+  .gal__item .gal__frame--contain{aspect-ratio:3/4}
+  .reel__item{flex:0 0 min(76vw,300px)}
+  .reel__item figcaption{font-size:13px}
   .lb__stage{padding:52px 14px 92px}
   .lb__nav{width:36px;height:36px}
   .lb__nav--prev{left:10px}

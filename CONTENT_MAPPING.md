@@ -628,6 +628,64 @@ The two clips are placed where they carry weight rather than where they fill spa
 leaking-joint clip sits in the pipe-leakage case study as evidence, and appears in the gallery
 as well; the site-walk clip sits in the vacant-possession group.
 
+## August 2026 amendment — Nelfar's review comments
+
+Nelfar reviewed the site on 19 August 2026 and sent four things back, with supporting
+documents. All four are applied.
+
+**1. Three items to add.** Her words: "Preparing House Rules for new project", "Setting up
+Management Office for the site", "Arranging Tenders and Interview for vendors for new projects
+together with Developer Representatives". The Home page service cards were rewritten around
+them. Each now has its own card rather than being folded into a general one, and the grid runs
+eight cards plus the enquiry card.
+
+**2. House Rules deserve their own weight.** Her words: "Masuk kan ni bukan senang nk buat
+House Rules" — put this in, House Rules are not easy to write. She sent two completed documents
+as evidence:
+
+| Document | Development | Length |
+|---|---|---|
+| `NTP HOUSE RULES COMPLETED VERSION.pdf` | Residensi Neksus Taman Pertama, MKH Development Berhad | 65 pages |
+| `K2R Parkland - House Rules by SAPM.pdf` | Kajang 2 Parkland Residence, Parkland | 49 pages |
+
+A third, Laman Segar Hijau, she reports at about 90 per cent. `work-house-rules.html` is a new
+case-study page describing the work. Its account of what a House Rules document contains is
+taken from the contents pages of those two files, not invented: by-laws and additional by-laws,
+occupancy, moving in and out, access cards, renovation, refuse, parking, fire safety and
+emergency, maintenance, the maintenance fund and credit control, management's rights, and then
+facility-by-facility rules for the hall, court, pools, playground, gym, jogging track, BBQ area,
+sauna and steam rooms, surau, library, yoga deck, sundeck, sky deck, reflexology area and
+assembly point.
+
+**Neither PDF is published on the site, and neither should be.** They are client documents
+belonging to MKH Development Berhad and Parkland, and their content is the developments' own
+by-laws. The page describes the work instead. If Nelfar wants visible evidence, a cover page
+thumbnail is the most that should be considered, and only with the developer's agreement.
+
+**3. Bills of Quantities.** Her words: "Preparation of BQ mama buat". The example sent is
+`Bill of Quantities Landscape (LSH) - A2.pdf`, 44 pages: LSH SEGAR Level 6 landscape works,
+dated 13 August 2026, covering ground floor, LG1, LG2, Level 6 and the facade creepers, split
+by tower and zone, with preliminaries, planting medium and mulch priced separately and every
+plant, shrub and pot itemised by species, specification and count. It now has a service card,
+a section on the House Rules page, and a line in Areas of Practice. The document itself is not
+published, for the same reason as the House Rules files.
+
+**4. A correction.** She circled the Role line on the underground pipe leakage case study,
+which read "Building Manager", and wrote "Business Development Manager". Applied, and the
+approach paragraph on that page was adjusted so it no longer describes the work as day-to-day
+building management.
+
+### Also received, and deliberately not used
+
+`Presentation JB by Nelz & Sy.pptx` is SA Property Management's own company deck: 65 sites,
+26,998 units, 289 employees, the firm's service lines, and its project lists for Iskandar
+Medini, Johor Bahru and Kuala Lumpur. **That is the company's record, not Nelfar's personal
+one**, and nothing from it has been added to the project lists. Two things in it were used only
+as corroboration: slide 21 is built from the cover pages of the two House Rules documents above,
+and slide 22 describes a townhall at Kajang 2 Parkland. The deck's Kajang 2 townhall photographs
+are not the same files as the townhall photographs in the gallery, so the gallery captions still
+do not name that event.
+
 ## Open items to confirm with Nelfar
 
 1. **The pipe leakage site** — was it Vista Seri Alam? If so the case study can name it.
@@ -644,3 +702,10 @@ as well; the site-walk clip sits in the vacant-possession group.
    to publish? See `CREDITS.md`.
 9. **The unnamed buildings in the gallery** — several offices, plant rooms and the handover
    driveway could be named if she wants them named. They are deliberately generic for now.
+10. **The townhall photographs** — the company deck places a townhall at Kajang 2 Parkland. Are
+    the gallery photographs from that event? If so the captions can name it.
+11. **Laman Segar Hijau House Rules** — recorded as "about 90 per cent". Worth updating when
+    it is finished.
+12. **The pipe leakage role** — now Business Development Manager on her instruction. Note this
+    sits oddly beside the page's own description of day-to-day troubleshooting; the copy was
+    softened, but she may want to say more about what the role actually involved there.

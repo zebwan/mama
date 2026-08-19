@@ -14,6 +14,7 @@ based in Johor Bahru, Malaysia.
 | `contact.html` | Contact — enquiry form |
 | `work-southkey-mosaic.html` | Case study — utilities billing recovery |
 | `work-pipe-leakage.html` | Case study — underground pipe leakage |
+| `work-house-rules.html` | Case study — House Rules and project documents |
 | `work-*.html` (six more) | One page per development, chained by a "Next" button |
 
 ## Stack
@@ -59,7 +60,7 @@ testimonials, awards, certifications or client endorsements.
 
 ## Notes
 
-- Nine items are flagged for confirmation in `CONTENT_MAPPING.md` — see "Open items". Two of
+- Twelve items are flagged for confirmation in `CONTENT_MAPPING.md` — see "Open items". Two of
   them matter before the site is promoted: the 2021 role date, and whether the townhall
   photographs of owners are cleared to publish.
 - Photographs illustrate the type of work described and are not necessarily images of

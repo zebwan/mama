@@ -174,7 +174,7 @@ right.
   Avenue in Tampoi, Eco Cascadia and Iskandar Residences, then Greenfield Regency, Southkey Mosaic
   and The Lakefront Southkey with CBRE WTW. Since 2022 I've worked on the other end of the process at
   SA Property Management, assessing developments at tender stage and leading the takeover that turns
-  a completed building into a managed one. I hold a Master in Management from UNIRAZAK.*
+  a completed building into a managed one. I hold a Master in Management.*
 - Image: her studio headshot
 
 **SOURCE:** All four CV roles with their named developments; Education block.
@@ -380,7 +380,7 @@ does not apply to this build.
 - Para 2: *Before that I spent eight years managing buildings directly, handling the technical and
   non-technical side of running residential and mixed developments and working closely with joint
   management bodies, management corporations, developers, residents and contractors. I hold a Master
-  in Management from UNIRAZAK Kuala Lumpur.*
+  in Management.*
 
 **SOURCE:** CV Profile, current role, prior roles, Education.
 
